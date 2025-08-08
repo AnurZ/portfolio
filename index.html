@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+AU+QLD:wght@100..400&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="navbar">
+      <p>Anur Zjakic OS</p>
+    </div>
+
+    <div class="grid-container">
+      <div class="quadrant top-left">
+        <!-- Place your 5 icons here -->
+        <div class="icon-grid">
+          <div class="icon-item">
+            <img src="icons/folder.png" alt="Relevant Experience" />
+            <span>Relevant Experience</span>
+          </div>
+          <div class="icon-item">
+            <img src="icons/github.png" alt="Github" />
+            <span>Github</span>
+          </div>
+          <div class="icon-item">
+            <img src="icons/folder (2).png" alt="Education" />
+            <span>Education</span>
+          </div>
+          <div class="icon-item">
+            <img src="icons/folder (3).png" alt="Email " />
+            <span>Email </span>
+          </div>
+          <div class="icon-item">
+            <img src="icons/folder (4).png" alt="Skills" />
+            <span>Skills</span>
+          </div>
+          <div class="icon-item">
+            <img src="icons/folder.png" alt="CV" />
+            <span>CV</span>
+          </div>
+        </div>
+      </div>
+      <div class="quadrant top-right"></div>
+      <div class="quadrant bottom-left"></div>
+      <div class="quadrant bottom-right"></div>
+    </div>
+
+    <div id="window-overlay" class="window hidden">
+      <div class="window-header">
+        <span id="window-title">Title</span>
+        <div class="window-controls">
+          <button id="minimize-window">—</button>
+          <button id="maximize-window">▢</button>
+          <button id="close-window">✖</button>
+        </div>
+      </div>
+      <div id="window-content" class="window-content">
+        <p>Content goes here...</p>
+      </div>
+    </div>
+
+    <div class="footer">
+      ★
+      <div id="taskbar" class="taskbar"></div>
+    </div>
+
+    <script src="scripts/script.js"></script>
+  </body>
+</html>

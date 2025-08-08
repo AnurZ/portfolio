@@ -1,0 +1,314 @@
+/* Make sure html and body fill the viewport */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  position: relative;
+  padding: 0;
+  background: linear-gradient(135deg, #add8e6, #ffc0cb);
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.15) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(135deg, #add8e6, #ffc0cb);
+  background-size: 40px 40px, 40px 40px, auto;
+  background-repeat: repeat, repeat, no-repeat;
+  background-position: 0 0, 0 0, 0 0;
+}
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-left: 20px;
+  height: 3%;
+  text-align: left;
+}
+
+.cv-pdf {
+  background-color: red;
+}
+
+.navbar p {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: small;
+  margin-top: 5px;
+}
+
+/* Footer styles (you already have these) */
+.footer {
+  height: 3%; /* set explicit height */
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #2b6cb0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+}
+
+.footer p {
+  padding: 0;
+  margin: 0;
+}
+
+/* Content area between navbar and footer with gradient background */
+.content-area {
+  position: absolute;
+  top: 3%; /* same as navbar height */
+  bottom: 3%; /* match footer height exactly */
+  left: 0;
+  right: 0;
+
+  background: linear-gradient(135deg, #add8e6, #ffc0cb);
+
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.15) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(135deg, #add8e6, #ffc0cb);
+
+  background-size: 40px 40px, 40px 40px, auto;
+  background-repeat: repeat, repeat, no-repeat;
+  background-position: 0 0, 0 0, 0 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  position: absolute;
+  top: 3%;
+  bottom: 3%;
+  left: 0;
+  right: 0;
+  padding: 30px;
+}
+
+.quadrant {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 50px); /* 3 columns */
+  grid-auto-rows: 75px;
+  gap: 30px;
+  justify-content: start;
+  align-content: start;
+}
+
+.icon-grid img {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.icon-grid img:hover {
+  transform: scale(1.1);
+}
+
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  margin: 0 auto;
+  align-items: center;
+  font-size: 12px;
+  color: black;
+  text-align: center;
+  font-weight: 600;
+}
+
+.icon-item img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+.window {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: auto;
+  background: #f0f0f0;
+  border: 2px solid #000;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.window-header {
+  background: linear-gradient(135deg, #add8e6, #ffc0cb);
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.15) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(135deg, #add8e6, #ffc0cb);
+  color: #333; /* dark but soft text for contrast */
+  padding: 6px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  border-bottom: 2px solid #d4a0b0; /* subtle border in soft pink */
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.6); /* soft white glow */
+  cursor: move;
+}
+
+.window.maximized {
+  top: 3%; /* Below the navbar */
+  bottom: 3%; /* Above the footer */
+  right: 0;
+  left: auto;
+  width: 75vw; /* 75% width */
+  height: calc(100vh - 6%);
+  transform: none;
+  background-color: white;
+}
+
+.window.maximized .window-content {
+  height: calc(100% - 32px); /* subtract header */
+  overflow-y: auto;
+  background-color: white;
+}
+
+.window-content ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.window-content li {
+  margin-bottom: 8px;
+}
+
+.window-header button {
+  background-color: #c0c0c0;
+  border: 2px solid #fff; /* highlight */
+  box-shadow: inset 1px 1px 0 #fff,
+    /* highlight top-left */ inset -1px -1px 0 #404040; /* shadow bottom-right */
+  border-radius: 0;
+  width: 18px;
+  height: 18px;
+  margin-left: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  line-height: 14px;
+  text-align: center;
+  color: black;
+  font-family: "Space Grotesk", sans-serif;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.window-header button:hover {
+  background-color: #a2cffe; /* very light sky blue */
+  color: #25476a; /* dark muted blue */
+  border-color: #a2cffe;
+
+  box-shadow: none;
+}
+
+.window-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  background-color: white;
+  overflow-y: auto;
+  max-height: 85vh;
+  font-family: "Space Grotesk", sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer {
+  height: 3%;
+  padding-left: 20px;
+  background-color: #2b6cb0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+}
+
+.taskbar {
+  display: flex;
+  gap: 10px;
+  margin-left: 10px;
+}
+
+.taskbar-button {
+  background-color: #e0e7f1; /* very light cool blue-gray */
+  border: 1px solid #a0a8b9; /* medium cool gray border */
+  padding: 4px 10px;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: "Space Grotesk", sans-serif;
+  color: #34445d; /* dark slate blue text */
+  box-shadow: inset 1px 1px 0 #fff,
+    /* subtle highlight top-left */ inset -1px -1px 0 #7a8599; /* subtle shadow bottom-right */
+  user-select: none;
+  border-radius: 2px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.taskbar-button:hover {
+  background-color: #aac4ff; /* pastel blue on hover */
+  border-color: #8099d9;
+  color: #1f2a48;
+  box-shadow: none;
+}
+
+.window-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.window-controls {
+  display: flex;
+  gap: 5px;
+}
+
+.window-controls button {
+  background-color: #eee;
+  border: 1px solid #aaa;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  cursor: pointer;
+  padding: 0;
+}
