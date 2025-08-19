@@ -13,14 +13,18 @@ document.addEventListener("DOMContentLoaded", () => {
 <div class="projects-grid">
   <!-- Project 1: FullStackStore -->
   <div class="project-card">
+  
     <div class="project-header">
       <h3 class="project-title">FullStackStore — E-commerce Web App</h3>
       <div class="project-links">
-        <a class="project-link" href="https://fullstackstore-anur.azurewebsites.net/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+        <a class="project-link" href="https://fullstackstore-anur.azurewebsites.net/" target="_blank " rel="noopener noreferrer">Live Demo</a>
         <a class="project-link" href="https://github.com/AnurZ/fullstackstore" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
+      
     </div>
-
+    <p style="font-size: 0.85em; color: gray; font-style: italic;">
+⏳ First load may take ~20s (free Azure hosting).
+</p>
     <p>A modern full-stack online store built with Angular and ASP.NET Core Web API.</p>
 
     <div class="project-media">
@@ -59,7 +63,9 @@ document.addEventListener("DOMContentLoaded", () => {
         
       </div>
     </div>
-
+     <p style="font-size: 0.85em; color: gray; font-style: italic;">
+⏳ First load may take ~10s (free Azure hosting).
+</p>
     <p>Clean blog app with auth, CRUD for posts, pagination, and light/dark theming.</p>
     
     <div  class="project-media">
@@ -103,7 +109,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     Github: `<a href="https://github.com/AnurZ" target="_blank">https://github.com/AnurZ</a>`,
     Education: `<p>Bachelor's in Software Engineering<br>FIT Mostar</p>`,
-    Email: `<p>Contact me at:<br><code>anuranci@gmail.com</code></p>`,
+    Email: `<p>
+  Contact me at:<br>
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=anuranci@gmail.com&su=Portfolio Inquiry&body=Hi Anur," target="_blank">
+  anuranci@gmail.com
+</a>
+</p>`,
     Skills: `
 <h3>Technical Skills</h3>
 <strong>Frontend</strong>

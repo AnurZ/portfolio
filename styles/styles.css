@@ -261,6 +261,14 @@ body {
   right: 0;
   display: flex;
   align-items: center;
+  justify-content: space-between; /* pushes ★ left, datetime right */
+  color: white;
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+.datetime {
+  padding-right: 15px;
 }
 
 .taskbar {

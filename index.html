@@ -22,7 +22,7 @@
         <div class="icon-grid">
           <div class="icon-item">
             <img src="icons/folder.png" alt="Relevant Experience" />
-            <span>Relevant Experience</span>
+            <span>Projects</span>
           </div>
           <div class="icon-item">
             <img src="icons/github.png" alt="Github" />
@@ -68,7 +68,24 @@
     <div class="footer">
       ★
       <div id="taskbar" class="taskbar"></div>
+      <div id="datetime" class="datetime"></div>
     </div>
+
+    <script>
+      function updateDateTime() {
+        const now = new Date();
+        const options = {
+          weekday: "short",
+          hour: "2-digit",
+          minute: "2-digit",
+        };
+        document.getElementById("datetime").textContent = now
+          .toLocaleDateString(undefined, options)
+          .replace(",", "");
+      }
+      setInterval(updateDateTime, 1000);
+      updateDateTime();
+    </script>
 
     <script src="scripts/script.js"></script>
   </body>
