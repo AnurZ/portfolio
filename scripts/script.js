@@ -10,35 +10,99 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const windowContentMap = {
     "Relevant Experience": `
-    <div class="ul-exp" style="margin-bottom:5px;">
-  <h3>FullStackStore - E-commerce Web Application</h3>
-  <a href="https://fullstackstore-anur.azurewebsites.net/" target="_blank" rel="noopener noreferrer">Live Demo</a>
-  <p>A modern full-stack online store built with Angular and ASP.NET Core Web API.</p>
-  </div>
-  <div class="img-div" style="background-color: rgba(188, 108, 220, 1);padding: 5px; margin-bottom: 10px;">
-  <img src="images/fullstackstore-screenshot.png" alt="FullStackStore Screenshot" style="max-width: 85%; display: block; margin: 10px auto; border: 1px solid #ccc; border-radius: 4px;" />
+<div class="projects-grid">
+  <!-- Project 1: FullStackStore -->
+  <div class="project-card">
+    <div class="project-header">
+      <h3 class="project-title">FullStackStore — E-commerce Web App</h3>
+      <div class="project-links">
+        <a class="project-link" href="https://fullstackstore-anur.azurewebsites.net/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+        <a class="project-link" href="https://github.com/AnurZ/fullstackstore" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
     </div>
-  
-  <div class="ul-exp">
-  <strong><a style="margin-left:10px;">Highlights:</a></strong>
-  <ul>
-    <li>Developed a full-featured e-commerce platform from scratch</li>
-    <li>Implemented authentication, product management, and Stripe payment integration</li>
-    <li>Designed a responsive Angular UI with admin tools and data binding</li>
-    <li>Built RESTful APIs with ASP.NET Core and secured them with JWT</li>
-  </ul>
+
+    <p>A modern full-stack online store built with Angular and ASP.NET Core Web API.</p>
+
+    <div class="project-media">
+      <img src="images/fullstackstore-screenshot.png" alt="FullStackStore Screenshot" />
     </div>
-  <div class="ul-exp">
-  <strong>Technologies:</strong>
-  <ul>
-    <li><em>Frontend:</em> Angular, TypeScript, Angular Material</li>
-    <li><em>Backend:</em> ASP.NET Core Web API, Entity Framework Core</li>
-    <li><em>Tools:</em> Git, Postman, Swagger, SQLite</li>
-  </ul>
+
+    <span class="section-label">Highlights</span>
+    <ul class="bullets">
+      <li>Developed a full-featured e-commerce platform from scratch</li>
+      <li>Authentication, product management, Stripe payment integration</li>
+      <li>Responsive Angular UI with admin tools and data binding</li>
+      <li>RESTful APIs secured with JWT</li>
+    </ul>
+
+    <span class="section-label">Tech</span>
+    <div class="pill-row" aria-label="Technologies">
+      <span class="pill">Angular</span>
+      <span class="pill">TypeScript</span>
+      <span class="pill">Angular Material</span>
+      <span class="pill">ASP.NET Core</span>
+      <span class="pill">EF Core</span>
+      <span class="pill">SQLite</span>
+      <span class="pill">Stripe</span>
+      <span class="pill">Swagger</span>
+    </div>
   </div>
+
+  <!-- Project 2: RetroBlog -->
+  <div class="project-card">
+    <div class="project-header">
+      <h3 class="project-title">RetroBlog — Blog Platform</h3>
+      <div class="project-links">
+        
+        <a class="project-link" href="https://retroblog-anur.azurewebsites.net/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+        <a class="project-link" href="https://github.com/AnurZ/RetroBlog" target="_blank" rel="noopener noreferrer">GitHub</a>
+        
+      </div>
+    </div>
+
+    <p>Clean blog app with auth, CRUD for posts, pagination, and light/dark theming.</p>
+    
+    <div  class="project-media">
+    <div style="padding:5px">Dark theme</div>
+    <img src="images/darkTheme.PNG" alt="RetroBlog Screenshot" />
+    <div style="padding:5px">Light theme</div>
+      <img src="images/lightTheme.PNG" alt="RetroBlog Screenshot" />
+    </div>
+
+    <span class="section-label">Technologies Used</span>
+    <div class="pill-row" aria-label="Technologies">
+      <span class="pill">HTML</span>
+      <span class="pill">CSS</span>
+      <span class="pill">JavaScript</span>
+      <span class="pill">Responsive UI</span>
+      <span class="pill">Dark/Light Theme</span>
+      <span class="pill">ASP.NET Core 9</span>
+      <span class="pill">Web API</span>
+      <span class="pill">Microsoft Identity</span>
+      <span class="pill">Entity Framework Core</span>
+      <span class="pill">Repository Pattern</span>
+      <span class="pill">SQLite</span>
+      <span class="pill">Swagger</span>
+      <span class="pill">Postman</span>
+      <span class="pill">Git & GitHub</span>
+      <span class="pill">Visual Studio</span>
+    </div>
+
+    <span class="section-label">Key Features</span>
+    <ul class="bullets">
+      <li>Browse posts anonymously</li>
+      <li>Register & login (Microsoft Identity)</li>
+      <li>Create, edit, delete posts (auth only)</li>
+      <li>API endpoints for posts & users</li>
+      <li>Pagination for listing</li>
+      <li>Dark / light theme toggle</li>
+    </ul>
+  </div>
+</div>
 `,
+
     Github: `<a href="https://github.com/AnurZ" target="_blank">https://github.com/AnurZ</a>`,
-    Education: `<p>Bachelor's in Computer Science<br>FIT Mostar</p>`,
+    Education: `<p>Bachelor's in Software Engineering<br>FIT Mostar</p>`,
     Email: `<p>Contact me at:<br><code>anuranci@gmail.com</code></p>`,
     Skills: `
 <h3>Technical Skills</h3>
