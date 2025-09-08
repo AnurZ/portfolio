@@ -152,7 +152,7 @@ body {
   position: fixed;
   top: 50%;
   left: 50%;
-  width: 850px;
+  width: 1100px;
   max-width: 90vw;
   height: auto;
   background: #f0f0f0;
@@ -326,10 +326,14 @@ body {
 }
 
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  align-items: start;
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(280px, 1fr)
+    ); /* flexible columns */
+    gap: 20px; /* space between cards */
+  }
 }
 
 @media (max-width: 900px) {
@@ -348,6 +352,7 @@ body {
   border-radius: 14px;
   padding: 16px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  margin-top: 10px;
 }
 
 .project-header {
