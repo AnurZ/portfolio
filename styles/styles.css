@@ -278,6 +278,7 @@ body {
 }
 
 .taskbar-button {
+  position: absolute;
   background-color: #e0e7f1; /* very light cool blue-gray */
   border: 1px solid #a0a8b9; /* medium cool gray border */
   padding: 4px 10px;
@@ -290,6 +291,8 @@ body {
   user-select: none;
   border-radius: 2px;
   transition: background-color 0.2s ease, color 0.2s ease;
+  left: 40px;
+  bottom: 4%;
 }
 
 .taskbar-button:hover {
@@ -322,11 +325,10 @@ body {
   padding: 0;
 }
 
-/* Projects layout */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
   align-items: start;
 }
 

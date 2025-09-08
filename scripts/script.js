@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
       
     </div>
     <p style="font-size: 0.85em; color: gray; font-style: italic;">
-⏳ First load may take ~20s (free Azure hosting).
-</p>
+  ⏳ First load may take ~20s (free Azure hosting).
+  </p>
     <p>A modern full-stack online store built with Angular and ASP.NET Core Web API.</p>
 
     <div class="project-media">
@@ -64,8 +64,8 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     </div>
      <p style="font-size: 0.85em; color: gray; font-style: italic;">
-⏳ First load may take ~10s (free Azure hosting).
-</p>
+  ⏳ First load may take ~10s (free Azure hosting).
+  </p>
     <p>Clean blog app with auth, CRUD for posts, pagination, and light/dark theming.</p>
     
     <div  class="project-media">
@@ -104,11 +104,66 @@ document.addEventListener("DOMContentLoaded", () => {
       <li>Dark / light theme toggle</li>
     </ul>
   </div>
+
+
+
+  <div class="project-card">
+    <div class="project-header">
+      <h3 class="project-title">GameShelf — Game Store Web App</h3>
+      <div class="project-links">
+        <a class="project-link" href="https://gameshelf-anur.azurewebsites.net/home" target="_blank" rel="noopener noreferrer">Live Demo</a>
+        <a class="project-link" href="https://github.com/AnurZ/GameShelf" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+    <p style="font-size: 0.85em; color: gray; font-style: italic;">
+    ⏳ First load may take ~10s (free Azure hosting)
+    </p>
+    <p>An online game store built with Angular frontend and ASP.NET Core backend, featuring authentication, browsing, and purchasing games.</p>
+
+    <div class="project-media">
+      <img src="images/gameshelf.PNG" alt="GameShelf Screenshot" />
+    </div>
+
+    <span class="section-label">Highlights</span>
+    <ul class="bullets">
+      <li>Browse, search, and purchase games</li>
+      <li>Authentication with JWT tokens</li>
+      <li>Admin panel for managing games</li>
+      <li>Responsive UI built with Angular</li>
+      <li>Backend APIs built with ASP.NET Core Web API</li>
+    </ul>
+
+    <span class="section-label">Tech</span>
+    <div class="pill-row" aria-label="Technologies">
+      <span class="pill">Angular</span>
+      <span class="pill">TypeScript</span>
+      <span class="pill">ASP.NET Core</span>
+      <span class="pill">Entity Framework Core</span>
+      <span class="pill">SQLite</span>
+      <span class="pill">JWT</span>
+      <span class="pill">Swagger</span>
+      <span class="pill">Responsive Design</span>
+    </div>
+
+      <span class="section-label">Key Features</span>
+    <ul class="bullets">
+      <li>Buy Games</li>
+      <li>Serach,sort,filter games</li>
+      <li>Register & login (JWT Authentication)</li>
+      <li>Create new games (admin only)</li>
+      <li>Pagination for listing</li>
+    </ul>
+
+  </div>
+
 </div>
+
+
+
 `,
 
     Github: `<a href="https://github.com/AnurZ" target="_blank">https://github.com/AnurZ</a>`,
-    Education: `<p>Bachelor's in Software Engineering<br>FIT Mostar</p>`,
+    Education: `<p> Bachelor's in Software Engineering <br>FIT Mostar. (ongoing)</p>`,
     Email: `<p>
   Contact me at:<br>
   <a href="https://mail.google.com/mail/?view=cm&fs=1&to=anuranci@gmail.com&su=Portfolio Inquiry&body=Hi Anur," target="_blank">
