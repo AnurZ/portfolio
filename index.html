@@ -3,6 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Anur Zjakic | Portfolio</title>
+    <meta
+      name="description"
+      content="Angular + .NET engineer shipping polished full-stack web apps. Explore projects, skills, and ways to get in touch."
+    />
+    <meta property="og:title" content="Anur Zjakic | Portfolio" />
+    <meta
+      property="og:description"
+      content="Angular + .NET engineer shipping polished full-stack web apps."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/gameshelf.PNG" />
+    <meta property="og:url" content="https://github.com/AnurZ" />
+    <meta name="theme-color" content="#2b6cb0" />
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,78 +27,299 @@
   </head>
   <body>
     <div class="navbar">
-      <p>Anur Zjakic OS</p>
+      <p class="brand">Anur Zjakic</p>
+      <div class="navbar-links">
+        <a href="https://github.com/AnurZ" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="mailto:anuranci@gmail.com">Email</a>
+        <a href="cv/Anur Zjakic SDE.pdf" download>CV</a>
+      </div>
     </div>
 
-    <div class="grid-container">
-      <div class="quadrant top-left">
-        <div class="icon-grid">
-          <div class="icon-item">
-            <img src="icons/folder.png" alt="Relevant Experience" />
-            <span>Projects</span>
+    <main class="page">
+      <section class="hero">
+        <p class="eyebrow">Full-stack engineer | Angular + ASP.NET Core</p>
+        <h1>Hi, I'm Anur Zjakic.</h1>
+        <p class="lead">
+          I build responsive, production-ready web apps with clean APIs and confident deployments.
+          Employers get someone who ships, iterates, and keeps the UI sharp.
+        </p>
+        <p class="lead secondary">
+          Open to frontend/full-stack internships; remote or hybrid. I like fast feedback, documented PRs, and clean APIs.
+        </p>
+        <div class="hero-actions">
+          <button class="btn" data-scroll="projects">View projects</button>
+          <a class="btn ghost" href="mailto:anuranci@gmail.com">Email me</a>
+          <a class="btn ghost" href="cv/Anur Zjakic SDE.pdf" download>Download CV</a>
+          <a class="btn ghost" href="https://github.com/AnurZ" target="_blank" rel="noopener noreferrer">View code</a>
+        </div>
+        <div class="pill-row hero-pills">
+          <span class="pill">Angular</span>
+          <span class="pill">TypeScript</span>
+          <span class="pill">ASP.NET Core</span>
+          <span class="pill">EF Core</span>
+          <span class="pill">Azure</span>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <p class="stat-number">6+</p>
+            <p class="stat-label">Full projects shipped</p>
           </div>
-          <div class="icon-item">
-            <img src="icons/github.png" alt="Github" />
-            <span>Github</span>
+          <div>
+            <p class="stat-number">2</p>
+            <p class="stat-label">Hosted demos on Azure</p>
           </div>
-          <div class="icon-item">
-            <img src="icons/folder (2).png" alt="Education" />
-            <span>Education</span>
-          </div>
-          <div class="icon-item">
-            <img src="icons/folder (3).png" alt="Email " />
-            <span>Email </span>
-          </div>
-          <div class="icon-item">
-            <img src="icons/folder (4).png" alt="Skills" />
-            <span>Skills</span>
-          </div>
-          <div class="icon-item">
-            <img src="icons/folder.png" alt="CV" />
-            <span>CV</span>
+          <div>
+            <p class="stat-number">Full-stack</p>
+            <p class="stat-label">UI + API + Auth</p>
           </div>
         </div>
-      </div>
-      <div class="quadrant top-right"></div>
-      <div class="quadrant bottom-left"></div>
-      <div class="quadrant bottom-right"></div>
-    </div>
+      </section>
 
-    <div id="window-overlay" class="window hidden">
-      <div class="window-header">
-        <span id="window-title">Title</span>
-        <div class="window-controls">
-          <button id="minimize-window">—</button>
-          <button id="maximize-window">▢</button>
-          <button id="close-window">✖</button>
+      <section id="projects" class="section">
+        <div class="section-header">
+          <div>
+            <p class="panel-title">Projects</p>
+            <p class="panel-subtitle">Full-stack builds with hosted demos.</p>
+          </div>
         </div>
-      </div>
-      <div id="window-content" class="window-content">
-        <p>Content goes here...</p>
-      </div>
-    </div>
+        <div class="projects-grid">
+          <article class="project-card project-horizontal">
+            <div class="project-media">
+              <img src="images/gameshelf.PNG" alt="GameShelf screenshot" />
+            </div>
+            <div class="project-info">
+              <span class="project-badge">01</span>
+              <div class="project-header">
+                <h3 class="project-title">GameShelf | Game Store</h3>
+                <div class="project-links">
+                  <a class="project-link" href="https://gameshelf-anur.azurewebsites.net/home" target="_blank" rel="noopener noreferrer">Live</a>
+                  <a class="project-link" href="https://github.com/AnurZ/GameShelf" target="_blank" rel="noopener noreferrer">Code</a>
+                </div>
+              </div>
+              <p class="note">First load may take ~10s (free Azure hosting).</p>
+              <span class="section-label">Highlights</span>
+              <ul class="bullets">
+                <li>JWT auth with protected routes and admin-only create/update.</li>
+                <li>Search, filter, and paginate games for quick browsing.</li>
+                <li>Cold-start ready demo deployed to Azure (free tier).</li>
+                <li>Responsive layout tuned for desktop and mobile shoppers.</li>
+              </ul>
+              <span class="section-label">Tech</span>
+              <div class="pill-row" aria-label="Technologies">
+                <span class="pill">Angular</span>
+                <span class="pill">TypeScript</span>
+                <span class="pill">ASP.NET Core</span>
+                <span class="pill">EF Core</span>
+                <span class="pill">SQLite</span>
+                <span class="pill">JWT</span>
+                <span class="pill">Swagger</span>
+              </div>
+            </div>
+          </article>
 
-    <div class="footer">
-      ★
-      <div id="taskbar" class="taskbar"></div>
-      <div id="datetime" class="datetime"></div>
-    </div>
+          <article class="project-card project-horizontal">
+            <div class="project-media">
+              <img src="images/fullstackstore-screenshot.png" alt="FullStackStore screenshot" />
+            </div>
+            <div class="project-info">
+              <span class="project-badge">02</span>
+              <div class="project-header">
+                <h3 class="project-title">FullStackStore | E-commerce</h3>
+                <div class="project-links">
+                  <a class="project-link" href="https://fullstackstore-anur.azurewebsites.net/" target="_blank" rel="noopener noreferrer">Live</a>
+                  <a class="project-link" href="https://github.com/AnurZ/fullstackstore" target="_blank" rel="noopener noreferrer">Code</a>
+                </div>
+              </div>
+              <p class="note">First load may take ~20s (free Azure hosting).</p>
+              <span class="section-label">Highlights</span>
+              <ul class="bullets">
+                <li>Implemented product CRUD, auth, and checkout flows end-to-end.</li>
+                <li>Stripe payments wired through secure backend endpoints.</li>
+                <li>Componentized UI with Angular Material and reactive forms.</li>
+              </ul>
+              <span class="section-label">Tech</span>
+              <div class="pill-row" aria-label="Technologies">
+                <span class="pill">Angular</span>
+                <span class="pill">TypeScript</span>
+                <span class="pill">Angular Material</span>
+                <span class="pill">ASP.NET Core</span>
+                <span class="pill">EF Core</span>
+                <span class="pill">SQLite</span>
+                <span class="pill">Stripe</span>
+                <span class="pill">Swagger</span>
+              </div>
+            </div>
+          </article>
 
-    <script>
-      function updateDateTime() {
-        const now = new Date();
-        const options = {
-          weekday: "short",
-          hour: "2-digit",
-          minute: "2-digit",
-        };
-        document.getElementById("datetime").textContent = now
-          .toLocaleDateString(undefined, options)
-          .replace(",", "");
-      }
-      setInterval(updateDateTime, 1000);
-      updateDateTime();
-    </script>
+          <article class="project-card project-horizontal">
+            <div class="project-media project-media-wide">
+              <img src="images/biteflow_waiter.png" alt="Biteflow waiter dashboard screenshot" />
+            </div>
+            <div class="project-info">
+              <span class="project-badge">03</span>
+              <div class="project-header">
+                <h3 class="project-title">Biteflow | Multi-tenant eRestaurant</h3>
+                <div class="project-links">
+                  <a class="project-link" href="https://github.com/AnurZ/Biteflow" target="_blank" rel="noopener noreferrer">Code</a>
+                </div>
+              </div>
+              <p class="note">In progress - multi-tenant eRestaurant management. Not deployed yet.</p>
+              <span class="section-label">Highlights</span>
+              <ul class="bullets">
+                <li>Multi-tenant architecture for multiple restaurants and locations.</li>
+                <li>Menu and item management with image uploads to Azure Storage.</li>
+                <li>Waiter-facing order flow and role-based dashboards.</li>
+                <li>Order routing and status tracking for kitchen/service teams.</li>
+              </ul>
+              <span class="section-label">Tech</span>
+              <div class="pill-row" aria-label="Technologies">
+                <span class="pill">Angular 21</span>
+                <span class="pill">TypeScript</span>
+                <span class="pill">ASP.NET Core 9</span>
+                <span class="pill">EF Core</span>
+                <span class="pill">SQL Server</span>
+                <span class="pill">Azure Storage</span>
+                <span class="pill">Azure App Service</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card project-horizontal">
+            <div class="project-media media-grid">
+              <div>
+                <div class="media-caption">Dark theme</div>
+                <img src="images/darkTheme.PNG" alt="RetroBlog screenshot dark theme" />
+              </div>
+              <div>
+                <div class="media-caption">Light theme</div>
+                <img src="images/lightTheme.PNG" alt="RetroBlog screenshot light theme" />
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-badge">04</span>
+              <div class="project-header">
+                <h3 class="project-title">RetroBlog | Blog Platform</h3>
+                <div class="project-links">
+                  <a class="project-link" href="https://retroblog-anur.azurewebsites.net/" target="_blank" rel="noopener noreferrer">Live</a>
+                  <a class="project-link" href="https://github.com/AnurZ/RetroBlog" target="_blank" rel="noopener noreferrer">Code</a>
+                </div>
+              </div>
+              <p class="note">First load may take ~10s (free Azure hosting).</p>
+              <span class="section-label">Highlights</span>
+              <ul class="bullets">
+                <li>Register/login flows with Microsoft Identity and JWT.</li>
+                <li>REST API for posts and users with pagination.</li>
+                <li>Theme toggle and responsive layout for reading anywhere.</li>
+                <li>Documented endpoints via Swagger + Postman collections.</li>
+              </ul>
+              <span class="section-label">Tech</span>
+              <div class="pill-row" aria-label="Technologies">
+                <span class="pill">ASP.NET Core</span>
+                <span class="pill">Web API</span>
+                <span class="pill">Microsoft Identity</span>
+                <span class="pill">EF Core</span>
+                <span class="pill">SQLite</span>
+                <span class="pill">Swagger</span>
+                <span class="pill">Responsive UI</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="highlight-cards">
+        <div class="highlight-card">
+          <p class="panel-title">What I ship</p>
+          <ul class="bullets">
+            <li>Full-stack apps with auth, CRUD, pagination, and payments.</li>
+            <li>APIs with Swagger docs, JWT security, and EF Core data access.</li>
+            <li>Responsive UIs that keep performance and polish in mind.</li>
+          </ul>
+        </div>
+        <div class="highlight-card">
+          <p class="panel-title">How I work</p>
+          <ul class="bullets">
+            <li>Iterate quickly with TypeScript tooling, Postman checks, and GitHub Actions basics.</li>
+            <li>Focus on readable code, predictable error handling, and maintainable components.</li>
+            <li>Comfortable collaborating async with clear docs and small, reviewable changes.</li>
+          </ul>
+        </div>
+        <div class="highlight-card">
+          <p class="panel-title">Notes</p>
+          <ul class="bullets">
+            <li>Demos are on Azure free tier; allow a short cold-start.</li>
+            <li>Repos include README, setup notes, and API docs links.</li>
+            <li>Happy to walk through code live or share Postman collections.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section two-column">
+        <div class="card">
+          <p class="panel-title">Skills</p>
+          <div class="pill-row">
+            <span class="pill">Angular</span>
+            <span class="pill">TypeScript</span>
+            <span class="pill">RxJS</span>
+            <span class="pill">Angular Material</span>
+            <span class="pill">ASP.NET Core</span>
+            <span class="pill">EF Core</span>
+            <span class="pill">REST APIs</span>
+            <span class="pill">SQLite</span>
+            <span class="pill">Azure</span>
+          </div>
+          <div class="skills-lists">
+            <div>
+              <h4>Frontend</h4>
+              <ul class="bullets">
+                <li>Angular 18+, TypeScript, reactive forms</li>
+                <li>Component-driven UI, responsive layouts</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Backend</h4>
+              <ul class="bullets">
+                <li>ASP.NET Core Web API, EF Core, LINQ</li>
+                <li>JWT auth, repository pattern</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Dev Tools</h4>
+              <ul class="bullets">
+                <li>Git/GitHub, VS Code, Visual Studio</li>
+                <li>Postman, Swagger/OpenAPI</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <p class="panel-title">Education & Contact</p>
+          <ul class="bullets">
+            <li><strong>Bachelor's in Software Engineering</strong> - FIT Mostar (ongoing)</li>
+            <li>Core courses: algorithms, OOP, databases, web engineering</li>
+          </ul>
+          <p class="panel-subtitle">Ready for internships or entry roles.</p>
+          <div class="contact-actions">
+            <a class="btn" href="mailto:anuranci@gmail.com">Email</a>
+            <a class="btn ghost" href="cv/Anur Zjakic SDE.pdf" download>Download CV</a>
+          </div>
+          <div class="pill-row" style="margin-top:10px;">
+            <span class="pill">Available: Remote / Mostar</span>
+            <span class="pill">Response: &lt;24h</span>
+            <span class="pill">Languages: EN / BS</span>
+          </div>
+          <div class="bullets" style="margin-top:10px;">
+            <li>Collaboration: async-friendly, documented PRs, small batches.</li>
+            <li>Tooling: Postman suites, Swagger, GitHub issues/boards.</li>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Let's build something-email me at <a href="mailto:anuranci@gmail.com">anuranci@gmail.com</a></p>
+      <a class="project-link" href="https://github.com/AnurZ" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </footer>
 
     <script src="scripts/script.js"></script>
   </body>
