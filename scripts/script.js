@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     </div>
     <p style="font-size: 0.85em; color: gray; font-style: italic;">
-    ⏳ First load may take ~10s (free Azure hosting)
+    ⏳ First load may take ~10s (free Azure hosting.)
     </p>
     <p>An online game store built with Angular frontend and ASP.NET Core backend, featuring authentication, browsing, and purchasing games.</p>
 
