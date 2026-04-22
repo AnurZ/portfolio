@@ -161,11 +161,11 @@ document.addEventListener("DOMContentLoaded", () => {
 `,
 
     Github: `<a href="https://github.com/AnurZ" target="_blank">https://github.com/AnurZ</a>`,
-    Education: `<p> Bachelor's in Software Engineering <br>FIT Mostar. (ongoing)</p>`,
+    Education: `<p> Bachelor's in Software Engineering <br>FIT Mostar. 2026</p>`,
     Email: `<p>
   Contact me at:<br>
-  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=anuranci@gmail.com&su=Portfolio Inquiry&body=Hi Anur," target="_blank">
-  anuranci@gmail.com
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=anur.zjakic.dev@gmail.com&su=Portfolio Inquiry&body=Hi Anur," target="_blank">
+  anur.zjakic.dev@gmail.com
 </a>
 </p>`,
     Skills: `
