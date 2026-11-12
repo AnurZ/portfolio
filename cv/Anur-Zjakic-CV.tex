@@ -115,8 +115,9 @@
             {Angular 20, ASP.NET Core 8, EF Core, SQL Server, Duende IdentityServer, MediatR, SignalR, xUnit}
   \bulletstart
     \cvitem{Worked from an issue tracker with feature branches and pull requests on Azure DevOps; wrote about 70\% of the non-merge commits.}
-    \cvitem{Built authentication end-to-end, moving from plain JWT to ASP.NET Core Identity + Duende IdentityServer with Google sign-in and hCaptcha.}
-    \cvitem{Implemented restaurant onboarding (activation requests, superadmin approval, Angular setup wizard) and tenant data isolation with EF Core global query filters.}
+    \cvitem{Built authentication end-to-end, moving from plain JWT to ASP.NET Core Identity + Duende IdentityServer (OIDC + PKCE) with Google sign-in and hCaptcha.}
+    \cvitem{Implemented restaurant onboarding with superadmin approval and tenant data isolation with EF Core global query filters.}
+    \cvitem{Built the admin CRUD (staff, orders, inventory, table reservations), the waiter and kitchen screens with real-time order updates over SignalR, and the analytics dashboard.}
     \cvitem{Closed authorization and ownership gaps in a security review, centralized the password policy, and added regression tests.}
   \bulletend
 

@@ -222,14 +222,25 @@
           with live screens for waiters and the kitchen. We worked from an issue tracker with feature branches and pull
           requests on Azure DevOps. I wrote about 70% of the non-merge commits.
         </p>
+        <div class="gallery" data-gallery="biteflow">
+          <button class="shot wide" data-src="images/biteflow/admin-dashboard.webp" data-cap="Admin dashboard · KPIs, live orders and analytics"><img src="images/biteflow/admin-dashboard.webp" alt="Biteflow admin dashboard with live orders" loading="lazy" /></button>
+          <button class="shot wide" data-src="images/biteflow/waiter.webp" data-cap="Waiter screen · tables and order entry"><img src="images/biteflow/waiter.webp" alt="Biteflow waiter screen" loading="lazy" /></button>
+          <button class="shot wide" data-src="images/biteflow/kitchen.webp" data-cap="Kitchen display · orders update in real time (SignalR)"><img src="images/biteflow/kitchen.webp" alt="Biteflow kitchen display system" loading="lazy" /></button>
+          <button class="shot wide" data-src="images/biteflow/admin-orders.webp" data-cap="Admin · orders management"><img src="images/biteflow/admin-orders.webp" alt="Biteflow orders management" loading="lazy" /></button>
+          <button class="shot wide" data-src="images/biteflow/admin-staff.webp" data-cap="Admin · staff management"><img src="images/biteflow/admin-staff.webp" alt="Biteflow staff management" loading="lazy" /></button>
+          <button class="shot wide" data-src="images/biteflow/superadmin.webp" data-cap="Superadmin · restaurant activation requests"><img src="images/biteflow/superadmin.webp" alt="Biteflow superadmin activation requests" loading="lazy" /></button>
+        </div>
+        <p class="note">Screenshots from the running app with seeded demo data.</p>
         <h4 class="mini">What I built</h4>
         <ul class="bullets">
-          <li>Authentication end-to-end: moved the app from plain JWT to <strong>ASP.NET Core Identity + Duende IdentityServer</strong>, with Google sign-in and hCaptcha</li>
-          <li>Restaurant onboarding: activation requests, superadmin approval and the Angular setup wizard</li>
+          <li>Authentication end-to-end: moved the app from plain JWT to <strong>ASP.NET Core Identity + Duende IdentityServer</strong> (OIDC code flow with PKCE for the Angular app), with Google sign-in and hCaptcha</li>
+          <li>Restaurant onboarding: activation requests, superadmin approval and the setup wizard</li>
           <li><strong>Tenant isolation</strong> with global EF Core query filters, so each restaurant only sees its own data</li>
-          <li>Staff management and the orders API</li>
+          <li>The admin CRUD screens and APIs: staff, orders, inventory and table reservations</li>
+          <li>The <strong>waiter and kitchen screens</strong> with real-time order updates over <strong>SignalR</strong>, and the analytics dashboard</li>
           <li>A security pass: closed ownership/authorization gaps, centralized the password policy, added regression tests</li>
         </ul>
+        <p class="note">My teammate built the public storefront, meals management and the table-layout editor.</p>
         <div class="pills">
           <span>Angular 20</span><span>TypeScript</span><span>ASP.NET Core 8</span><span>EF Core</span><span>SQL Server</span><span>Duende IdentityServer</span><span>MediatR</span><span>SignalR</span><span>xUnit</span><span>Azure DevOps</span>
         </div>
