@@ -3,88 +3,355 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="styles/styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Anur Zjakić | Junior Full-Stack Developer (.NET, Angular, Flutter)</title>
+  <meta name="description"
+    content="Anur Zjakić: junior full-stack developer from Mostar, Bosnia and Herzegovina. ASP.NET Core, Angular, Flutter, SQL Server, RabbitMQ, Docker. Open to junior roles in BiH and remote (EU)." />
+  <meta name="author" content="Anur Zjakić" />
+  <meta name="color-scheme" content="light dark" />
+
+  <!-- Link previews (LinkedIn, Slack, WhatsApp, email) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Anur Zjakić | Junior Full-Stack Developer" />
+  <meta property="og:description"
+    content=".NET, Angular and Flutter developer. Projects: GymLink, Biteflow, GameShelf. Open to junior roles in BiH and remote (EU)." />
+  <meta property="og:url" content="https://anurz.github.io/portfolio/" />
+  <meta property="og:image" content="https://anurz.github.io/portfolio/images/gymlink/d-trainers.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232563eb'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='white' text-anchor='middle'%3EAZ%3C/text%3E%3C/svg%3E" />
+
+  <!-- Apply the saved theme before first paint (no flash) -->
+  <script>
+    try {
+      var t = localStorage.getItem("az-theme");
+      if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t);
+    } catch (e) { }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Playwrite+AU+QLD:wght@100..400&family=Space+Grotesk:wght@300..700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
     rel="stylesheet" />
+  <link rel="stylesheet" href="styles/styles.css" />
 </head>
 
 <body>
-  <div class="navbar">
-    <p>Anur Zjakic OS</p>
+  <!-- ===================== ICONS ===================== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" /><path d="M4 21c0-4 4-6 8-6s8 2 8 6" /></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2" /><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18" /></symbol>
+    <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2" /><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4" /></symbol>
+    <symbol id="i-cap" viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z" /><path d="M6 11v5c3 2 9 2 12 0v-5" /></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M3 7l9 6 9-6" /></symbol>
+    <symbol id="i-term" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="M6 9l3 3-3 3M12 15h6" /></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" /><path d="M14 3v6h6M8 13h8M8 17h6" /></symbol>
+    <symbol id="i-branch" viewBox="0 0 24 24"><circle cx="6" cy="5" r="2.2" /><circle cx="6" cy="19" r="2.2" /><circle cx="18" cy="8" r="2.2" /><path d="M6 7.2v9.6M18 10.2c0 4-6 3-12 6" /></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" /></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z" /></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" /></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5" /><rect x="14" y="3" width="7" height="7" rx="1.5" /><rect x="3" y="14" width="7" height="7" rx="1.5" /><rect x="14" y="14" width="7" height="7" rx="1.5" /></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1" /><path d="M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1" /></symbol>
+  </svg>
+
+  <!-- ===================== TOP BAR ===================== -->
+  <header class="menubar">
+    <div class="menubar-left">
+      <span class="logo" aria-hidden="true">AZ</span>
+      <strong class="brand">Anur Zjakić</strong>
+      <span id="active-app" class="active-app">About me</span>
+    </div>
+    <div class="menubar-right">
+      <span class="status"><span class="dot" aria-hidden="true"></span><span class="status-long">Open to junior roles · Mostar, BiH ·
+          Remote (EU)</span><span class="status-short">Open to work</span></span>
+      <button id="view-toggle" class="bar-btn" type="button" aria-pressed="false" title="Switch to a plain one-page view">
+        <svg class="ic"><use href="#i-list" /></svg><span>Simple view</span>
+      </button>
+      <button id="theme-toggle" class="bar-btn icon-only" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <svg class="ic ic-moon"><use href="#i-moon" /></svg><svg class="ic ic-sun"><use href="#i-sun" /></svg>
+      </button>
+      <span id="clock" class="clock"></span>
+    </div>
+  </header>
+
+  <!-- ===================== DESKTOP ===================== -->
+  <main id="desktop" class="desktop">
+    <nav class="icons" aria-label="Apps">
+      <button class="app-icon" data-open="about"><span class="tile t-blue"><svg><use href="#i-user" /></svg></span><span>About me</span></button>
+      <button class="app-icon" data-open="projects"><span class="tile t-amber"><svg><use href="#i-folder" /></svg></span><span>Projects</span></button>
+      <button class="app-icon" data-open="experience"><span class="tile t-violet"><svg><use href="#i-briefcase" /></svg></span><span>Experience</span></button>
+      <button class="app-icon" data-open="skills"><span class="tile t-teal"><svg><use href="#i-cpu" /></svg></span><span>Skills</span></button>
+      <button class="app-icon" data-open="education"><span class="tile t-pink"><svg><use href="#i-cap" /></svg></span><span>Education</span></button>
+      <button class="app-icon" data-open="contact"><span class="tile t-green"><svg><use href="#i-mail" /></svg></span><span>Contact</span></button>
+      <button class="app-icon" data-open="terminal"><span class="tile t-dark"><svg><use href="#i-term" /></svg></span><span>Terminal</span></button>
+      <a class="app-icon" href="cv/Anur-Zjakic-CV.pdf" target="_blank" rel="noopener"><span class="tile t-red"><svg><use href="#i-file" /></svg></span><span>CV.pdf</span></a>
+      <a class="app-icon" href="https://github.com/AnurZ" target="_blank" rel="noopener"><span class="tile t-slate"><svg><use href="#i-branch" /></svg></span><span>GitHub</span></a>
+    </nav>
+
+    <aside class="widget" aria-label="Quick facts">
+      <p class="widget-kicker">Now</p>
+      <p><strong>Final-year Software Engineering</strong> student, FIT Mostar (2027)</p>
+      <p>Latest project: <button class="link-btn" data-open="projects">GymLink</button>, a .NET 10 + Flutter platform</p>
+      <p class="widget-kicker">Tip</p>
+      <p>Windows can be dragged, resized and minimised. Try the <button class="link-btn" data-open="terminal">Terminal</button>.</p>
+    </aside>
+
+    <div id="windows"></div>
+  </main>
+
+  <!-- ===================== DOCK ===================== -->
+  <nav class="dock" aria-label="Dock">
+    <button class="dock-item" data-open="about" title="About me"><span class="tile t-blue"><svg><use href="#i-user" /></svg></span></button>
+    <button class="dock-item" data-open="projects" title="Projects"><span class="tile t-amber"><svg><use href="#i-folder" /></svg></span></button>
+    <button class="dock-item" data-open="experience" title="Experience"><span class="tile t-violet"><svg><use href="#i-briefcase" /></svg></span></button>
+    <button class="dock-item" data-open="skills" title="Skills"><span class="tile t-teal"><svg><use href="#i-cpu" /></svg></span></button>
+    <button class="dock-item" data-open="contact" title="Contact"><span class="tile t-green"><svg><use href="#i-mail" /></svg></span></button>
+    <button class="dock-item" data-open="terminal" title="Terminal"><span class="tile t-dark"><svg><use href="#i-term" /></svg></span></button>
+    <span class="dock-sep" aria-hidden="true"></span>
+    <a class="dock-item" href="cv/Anur-Zjakic-CV.pdf" target="_blank" rel="noopener" title="CV (PDF)"><span class="tile t-red"><svg><use href="#i-file" /></svg></span></a>
+    <a class="dock-item" href="https://github.com/AnurZ" target="_blank" rel="noopener" title="GitHub"><span class="tile t-slate"><svg><use href="#i-branch" /></svg></span></a>
+  </nav>
+
+  <!-- ===================== SIMPLE (ONE-PAGE) VIEW ===================== -->
+  <div id="simple" class="simple" hidden>
+    <nav class="simple-nav" aria-label="Sections">
+      <a href="#s-projects">Projects</a><a href="#s-experience">Experience</a><a href="#s-skills">Skills</a><a
+        href="#s-education">Education</a><a href="#s-contact">Contact</a>
+    </nav>
+    <div id="simple-content" class="simple-content"></div>
+    <footer class="simple-footer">© Anur Zjakić · Built with plain HTML, CSS and JavaScript ·
+      <button class="link-btn" id="back-to-desktop" type="button">Switch to the desktop view</button></footer>
   </div>
 
-  <div class="grid-container">
-    <div class="quadrant top-left">
-      <div class="icon-grid">
-        <div class="icon-item">
-          <img src="icons/folder.png" alt="Relevant Experience" />
-          <span>Projects</span>
-        </div>
-        <div class="icon-item">
-          <img src="icons/github.png" alt="Github" />
-          <span>Github</span>
-        </div>
-        <div class="icon-item">
-          <img src="icons/folder (2).png" alt="Education" />
-          <span>Education</span>
-        </div>
-        <div class="icon-item">
-          <img src="icons/folder (3).png" alt="Email " />
-          <span>Email </span>
-        </div>
-        <div class="icon-item">
-          <img src="icons/folder (4).png" alt="Skills" />
-          <span>Skills</span>
-        </div>
-        <div class="icon-item">
-          <img src="icons/folder.png" alt="CV" />
-          <span>CV</span>
-        </div>
+  <!-- ===================== LIGHTBOX ===================== -->
+  <div id="lightbox" class="lightbox" hidden role="dialog" aria-modal="true" aria-label="Screenshot viewer">
+    <button class="lb-close" type="button" aria-label="Close">✕</button>
+    <button class="lb-nav lb-prev" type="button" aria-label="Previous screenshot">‹</button>
+    <figure>
+      <img id="lb-img" alt="" />
+      <figcaption id="lb-cap"></figcaption>
+    </figure>
+    <button class="lb-nav lb-next" type="button" aria-label="Next screenshot">›</button>
+  </div>
+
+  <!-- ===================== WINDOW CONTENT ===================== -->
+
+  <template id="tpl-about" data-title="About me" data-w="760" data-h="560">
+    <section id="s-about" class="hero">
+      <p class="kicker">Hi, I'm</p>
+      <h1>Anur Zjakić</h1>
+      <p class="role">Junior Full-Stack Developer · .NET · Angular · Flutter</p>
+      <p>
+        I'm a final-year Software Engineering student at FIT, Džemal Bijedić University of Mostar
+        (graduating 2027). I build full-stack apps with ASP.NET Core on the backend and Angular or Flutter on the
+        frontend. During my internship at Lotus IT I worked on a headless CMS / application framework in an XP team,
+        using TDD.
+      </p>
+      <p>
+        My latest project, <strong>GymLink</strong>, is a .NET 10 API with a RabbitMQ worker, real-time chat, Stripe
+        payments and Flutter apps for Android and Windows, with about 120 automated tests.
+      </p>
+      <div class="cta-row">
+        <button class="btn primary" data-open="projects">See my projects</button>
+        <a class="btn" href="cv/Anur-Zjakic-CV.pdf" target="_blank" rel="noopener">Download CV</a>
+        <a class="btn" href="https://github.com/AnurZ" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="mailto:anur.zjakic.dev@gmail.com?subject=Junior%20developer%20role">Email me</a>
       </div>
-    </div>
-    <div class="quadrant top-right"></div>
-    <div class="quadrant bottom-left"></div>
-    <div class="quadrant bottom-right"></div>
-  </div>
+      <dl class="facts">
+        <div><dt>Looking for</dt><dd>Junior / graduate developer roles (backend or full-stack)</dd></div>
+        <div><dt>Where</dt><dd>On-site or hybrid in Bosnia and Herzegovina, or remote for EU teams</dd></div>
+        <div><dt>Languages</dt><dd>Bosnian, English</dd></div>
+      </dl>
+    </section>
+  </template>
 
-  <div id="window-overlay" class="window hidden">
-    <div class="window-header">
-      <span id="window-title">Title</span>
-      <div class="window-controls">
-        <button id="minimize-window">—</button>
-        <button id="maximize-window">▢</button>
-        <button id="close-window">✖</button>
+  <template id="tpl-projects" data-title="Projects" data-w="980" data-h="680">
+    <section id="s-projects">
+      <h2 class="section-title">Projects</h2>
+
+      <article class="project featured">
+        <header class="project-head">
+          <div>
+            <h3>GymLink: gym &amp; personal-training platform</h3>
+            <p class="meta">Solo project · 2026 · .NET 10 · Flutter (Android + Windows)</p>
+          </div>
+          <a class="chip-link" href="https://github.com/AnurZ/GymLink" target="_blank" rel="noopener">Code on GitHub ↗</a>
+        </header>
+        <p>
+          Members find gyms and trainers, buy memberships and book sessions in an Android app. Gym and platform
+          admins run their business from a Windows desktop app. Both apps talk to one ASP.NET Core API.
+        </p>
+        <div class="gallery" data-gallery="gymlink">
+          <button class="shot phone" data-src="images/gymlink/m-map.webp" data-cap="Android · map of gyms (OpenStreetMap)"><img src="images/gymlink/m-map.webp" alt="GymLink Android app: map of gyms" loading="lazy" /></button>
+          <button class="shot phone" data-src="images/gymlink/m-recommendations.webp" data-cap="Android · personalised recommendations, each with a reason"><img src="images/gymlink/m-recommendations.webp" alt="GymLink Android app: recommendations" loading="lazy" /></button>
+          <button class="shot phone" data-src="images/gymlink/m-gym.webp" data-cap="Android · gym details, photos and memberships"><img src="images/gymlink/m-gym.webp" alt="GymLink Android app: gym details" loading="lazy" /></button>
+          <button class="shot phone" data-src="images/gymlink/m-reservations.webp" data-cap="Android · trainer reservations"><img src="images/gymlink/m-reservations.webp" alt="GymLink Android app: reservations" loading="lazy" /></button>
+          <button class="shot phone" data-src="images/gymlink/m-chat.webp" data-cap="Android · real-time chat with a trainer (SignalR)"><img src="images/gymlink/m-chat.webp" alt="GymLink Android app: chat" loading="lazy" /></button>
+          <button class="shot wide" data-src="images/gymlink/d-trainers.webp" data-cap="Windows · gym admin: trainers and services"><img src="images/gymlink/d-trainers.webp" alt="GymLink desktop app: trainers and services" loading="lazy" /></button>
+          <button class="shot wide" data-src="images/gymlink/d-reservations.webp" data-cap="Windows · gym admin: reservations"><img src="images/gymlink/d-reservations.webp" alt="GymLink desktop app: reservations" loading="lazy" /></button>
+          <button class="shot wide" data-src="images/gymlink/d-memberships.webp" data-cap="Windows · gym admin: memberships and payment status"><img src="images/gymlink/d-memberships.webp" alt="GymLink desktop app: memberships" loading="lazy" /></button>
+          <button class="shot wide" data-src="images/gymlink/c-stats.webp" data-cap="Windows · central admin: system statistics"><img src="images/gymlink/c-stats.webp" alt="GymLink desktop app: statistics" loading="lazy" /></button>
+        </div>
+        <p class="note">Screenshots from the running app with seeded demo data. The UI is in Bosnian.</p>
+        <ul class="bullets">
+          <li>Clean-architecture API (Domain / Application / Infrastructure / API) plus a separate background <strong>Worker</strong> service</li>
+          <li><strong>RabbitMQ</strong> with a transactional outbox: the Worker sends notifications and password-reset emails with retries, idempotent processing and dead-letter queues</li>
+          <li><strong>Stripe Checkout</strong> for memberships and trainer bookings, confirmed by webhook and a server-side session check</li>
+          <li>Real-time member ↔ trainer chat with <strong>SignalR</strong></li>
+          <li>Explainable hybrid <strong>recommender</strong> (preferences, activity, popularity) that handles brand-new users</li>
+          <li><strong>~120 xUnit tests</strong> (domain, application, API integration, architecture rules); the whole stack starts with one <code>docker compose up</code></li>
+        </ul>
+        <div class="pills">
+          <span>.NET 10</span><span>ASP.NET Core</span><span>EF Core</span><span>SQL Server</span><span>RabbitMQ</span><span>SignalR</span><span>Stripe</span><span>Flutter / Dart</span><span>Docker</span><span>xUnit</span>
+        </div>
+      </article>
+
+      <article class="project featured">
+        <header class="project-head">
+          <div>
+            <h3>Biteflow: multi-tenant restaurant management</h3>
+            <p class="meta">Team of 2 · Oct 2025 – Aug 2026 · Angular 20 · .NET 8</p>
+          </div>
+          <a class="chip-link" href="https://github.com/AnurZ/Biteflow" target="_blank" rel="noopener">Code on GitHub ↗</a>
+        </header>
+        <p>
+          A web platform where restaurants sign up, then run menus, inventory, tables, reservations, staff and orders,
+          with live screens for waiters and the kitchen. We worked from an issue tracker with feature branches and pull
+          requests on Azure DevOps. I wrote about 70% of the non-merge commits.
+        </p>
+        <h4 class="mini">What I built</h4>
+        <ul class="bullets">
+          <li>Authentication end-to-end: moved the app from plain JWT to <strong>ASP.NET Core Identity + Duende IdentityServer</strong>, with Google sign-in and hCaptcha</li>
+          <li>Restaurant onboarding: activation requests, superadmin approval and the Angular setup wizard</li>
+          <li><strong>Tenant isolation</strong> with global EF Core query filters, so each restaurant only sees its own data</li>
+          <li>Staff management and the orders API</li>
+          <li>A security pass: closed ownership/authorization gaps, centralized the password policy, added regression tests</li>
+        </ul>
+        <div class="pills">
+          <span>Angular 20</span><span>TypeScript</span><span>ASP.NET Core 8</span><span>EF Core</span><span>SQL Server</span><span>Duende IdentityServer</span><span>MediatR</span><span>SignalR</span><span>xUnit</span><span>Azure DevOps</span>
+        </div>
+      </article>
+
+      <article class="project">
+        <header class="project-head">
+          <div>
+            <h3>GameShelf: digital game store</h3>
+            <p class="meta">Solo project · 2025 · Angular 20 · .NET 9</p>
+          </div>
+          <a class="chip-link" href="https://github.com/AnurZ/GameShelf" target="_blank" rel="noopener">Code on GitHub ↗</a>
+        </header>
+        <p>A game store with a coin wallet, discounts, reviews, purchase history and an admin area.</p>
+        <div class="gallery" data-gallery="gameshelf">
+          <button class="shot wide single" data-src="images/gameshelf.webp" data-cap="GameShelf · home page with featured discounts"><img src="images/gameshelf.webp" alt="GameShelf home page with featured discounts and game catalogue" loading="lazy" /></button>
+        </div>
+        <ul class="bullets">
+          <li>JWT authentication with ASP.NET Core Identity and role-based admin features</li>
+          <li>Search, filtering, sorting and pagination</li>
+          <li>Transactions and user library backed by EF Core</li>
+        </ul>
+        <div class="pills"><span>Angular</span><span>TypeScript</span><span>ASP.NET Core 9</span><span>EF Core</span><span>SQLite</span><span>JWT</span></div>
+      </article>
+
+      <details class="earlier">
+        <summary>Earlier learning projects</summary>
+        <ul class="bullets">
+          <li><strong>FullStackStore</strong>: e-commerce store (Angular + ASP.NET Core, Stripe) built while following Neil Cummings' course. <a href="https://github.com/AnurZ/FullStackStore" target="_blank" rel="noopener">GitHub</a></li>
+          <li><strong>RetroBlog</strong>: blog with ASP.NET Core 9 Web API, Identity, repository pattern and a vanilla-JS frontend with light/dark theme.</li>
+        </ul>
+      </details>
+    </section>
+  </template>
+
+  <template id="tpl-experience" data-title="Experience" data-w="760" data-h="600">
+    <section id="s-experience">
+      <h2 class="section-title">Experience</h2>
+      <ol class="timeline">
+        <li>
+          <div class="job-head">
+            <h3>Software Development Intern · Lotus IT</h3>
+            <span>Jan 2026 – Apr 2026 · Mostar</span>
+          </div>
+          <ul class="bullets">
+            <li>Developed features for a headless CMS built as an application framework. Its widgets (e.g. a TipTap rich-text
+              editor, authentication, weather) talk to a <strong>Payload CMS</strong> service through a <strong>Java / Micronaut</strong>
+              middleware of controllers, services and Payload adapters, with a controller and services per widget</li>
+            <li>Took a feature at the morning meeting, built it during the day and demoed it in an afternoon review, then
+              worked through the feedback and change requests</li>
+            <li>Started with XP pair programming and TDD; later moved to AI-assisted (agentic) development while staying
+              hands-on</li>
+            <li>Stack: Java, Micronaut, Payload CMS, TypeScript, Vue.js, Nuxt</li>
+          </ul>
+        </li>
+        <li>
+          <div class="job-head">
+            <h3>Freelance Full-Stack Developer</h3>
+            <span>Jul 2023 – present · Remote</span>
+          </div>
+          <ul class="bullets">
+            <li>Built web apps for clients with Angular, ASP.NET Core Web API and ASP.NET MVC</li>
+            <li>Turned client designs into responsive landing pages</li>
+            <li>Designed databases and integrated online payments</li>
+            <li>Deployed and hosted apps on Azure, including networking and access configuration</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+  </template>
+
+  <template id="tpl-skills" data-title="Skills" data-w="820" data-h="520">
+    <section id="s-skills">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills">
+        <div><h4>Backend</h4><p>C#, ASP.NET Core Web API, EF Core, LINQ, ASP.NET Identity, JWT, Duende IdentityServer, MediatR, FluentValidation, SignalR, RabbitMQ</p></div>
+        <div><h4>Frontend &amp; mobile</h4><p>Angular, TypeScript, RxJS, Angular Material, HTML/CSS, Flutter/Dart, Vue.js, Nuxt</p></div>
+        <div><h4>Data</h4><p>SQL Server, PostgreSQL, MySQL, SQLite, SQL, EF Core migrations</p></div>
+        <div><h4>DevOps &amp; tools</h4><p>Docker / Docker Compose, Azure (App Service, Blob Storage), Azure DevOps Pipelines, GitHub Actions, Git, Swagger, Postman</p></div>
+        <div><h4>Testing &amp; practices</h4><p>xUnit, integration tests, TDD, XP, clean architecture, SOLID, REST API design, code review via pull requests</p></div>
+        <div><h4>Also</h4><p>Java, Micronaut, Payload CMS (internship)</p></div>
       </div>
-    </div>
-    <div id="window-content" class="window-content">
-    </div>
-  </div>
+    </section>
+  </template>
 
-  <div class="footer">
-    ★
-    <div id="taskbar" class="taskbar"></div>
-    <div id="datetime" class="datetime"></div>
-  </div>
+  <template id="tpl-education" data-title="Education" data-w="620" data-h="300">
+    <section id="s-education">
+      <h2 class="section-title">Education</h2>
+      <h3>BSc Software Engineering</h3>
+      <p>Faculty of Information Technologies (FIT), Džemal Bijedić University of Mostar<br />
+        2023 – 2027 (expected) · GPA 8.0 / 10</p>
+    </section>
+  </template>
 
-  <script>
-    function updateDateTime() {
-      const now = new Date();
-      const options = {
-        weekday: "short",
-        hour: "2-digit",
-        minute: "2-digit",
-      };
-      document.getElementById("datetime").textContent = now
-        .toLocaleDateString(undefined, options)
-        .replace(",", "");
-    }
-    setInterval(updateDateTime, 1000);
-    updateDateTime();
-  </script>
+  <template id="tpl-contact" data-title="Contact" data-w="620" data-h="380">
+    <section id="s-contact">
+      <h2 class="section-title">Contact</h2>
+      <p>The fastest way to reach me is email.</p>
+      <ul class="contact-list">
+        <li><svg class="ic"><use href="#i-mail" /></svg><a href="mailto:anur.zjakic.dev@gmail.com?subject=Junior%20developer%20role">anur.zjakic.dev@gmail.com</a></li>
+        <li><svg class="ic"><use href="#i-branch" /></svg><a href="https://github.com/AnurZ" target="_blank" rel="noopener">github.com/AnurZ</a></li>
+        <li><svg class="ic"><use href="#i-link" /></svg><a href="https://www.linkedin.com/in/anur-zjaki%C4%87-0169a5309" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><svg class="ic"><use href="#i-file" /></svg><a href="cv/Anur-Zjakic-CV.pdf" target="_blank" rel="noopener">Anur-Zjakic-CV.pdf</a></li>
+      </ul>
+    </section>
+  </template>
+
+  <template id="tpl-terminal" data-title="Terminal" data-w="700" data-h="440" data-simple="skip">
+    <div class="term" role="log" aria-live="polite">
+      <div class="term-out"></div>
+      <form class="term-line" autocomplete="off">
+        <label class="prompt" for="term-input">guest@anur-os:~$</label>
+        <input id="term-input" class="term-input" spellcheck="false" autocapitalize="off" aria-label="Terminal command" />
+      </form>
+    </div>
+  </template>
+
+  <noscript>
+    <p style="padding:80px 24px;max-width:640px">This site needs JavaScript for the desktop view. Anur Zjakić, junior full-stack
+      developer (.NET, Angular, Flutter). <a href="cv/Anur-Zjakic-CV.pdf">CV (PDF)</a> ·
+      <a href="https://github.com/AnurZ">GitHub</a> · <a href="mailto:anur.zjakic.dev@gmail.com">anur.zjakic.dev@gmail.com</a></p>
+  </noscript>
 
   <script src="scripts/script.js"></script>
 </body>

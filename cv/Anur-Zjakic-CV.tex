@@ -1,0 +1,154 @@
+%-------------------------------------------------------------
+% Anur Zjakić: CV (one page, ATS-friendly, Jake's-resume style)
+% Build: xelatex Anur-Zjakic-CV.tex
+%   (Overleaf: Menu -> Compiler -> XeLaTeX). XeLaTeX keeps "ć" as a real
+%   character, so ATS parsers read your name correctly.
+%-------------------------------------------------------------
+\documentclass[a4paper,10.5pt]{article}
+
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+
+\hypersetup{
+  pdftitle={Anur Zjakić - CV - Junior Full-Stack Developer},
+  pdfauthor={Anur Zjakić},
+  pdfsubject={Curriculum Vitae},
+  pdfkeywords={.NET, ASP.NET Core, CSharp, Angular, Flutter, junior developer, Mostar}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.55in}
+\addtolength{\evensidemargin}{-0.55in}
+\addtolength{\textwidth}{1.1in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{\vspace{-5pt}\scshape\raggedright\large\bfseries}{}{0em}{}[\color{black}\titlerule\vspace{-4pt}]
+
+% ---------- helpers ----------
+\newcommand{\cvitem}[1]{\item\small{#1\vspace{-1pt}}}
+\newcommand{\cvheading}[4]{
+  \vspace{-1pt}\item
+  \begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textbf{#2} \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-6pt}
+}
+\newcommand{\cvproject}[3]{
+  \vspace{-1pt}\item
+  \begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r}
+    #1 & \small #2 \\
+    \multicolumn{2}{l}{\textit{\small #3}} \\
+  \end{tabular*}\vspace{-6pt}
+}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\liststart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\listend}{\end{itemize}}
+\newcommand{\bulletstart}{\begin{itemize}[leftmargin=0.2in, itemsep=1pt]}
+\newcommand{\bulletend}{\end{itemize}\vspace{-4pt}}
+
+%=============================================================
+\begin{document}
+
+%---------- HEADER ----------
+\begin{center}
+  {\Huge \bfseries Anur Zjakić} \\ \vspace{2pt}
+  {\large Junior Full-Stack Developer \,|\, .NET \,·\, Angular \,·\, Flutter} \\ \vspace{4pt}
+  \small Mostar, Bosnia and Herzegovina \,|\, +387 62 729 291 \,|\,
+  \href{mailto:anur.zjakic.dev@gmail.com}{anur.zjakic.dev@gmail.com} \\ \vspace{1pt}
+  \href{https://anurz.github.io/portfolio/}{anurz.github.io/portfolio} \,|\,
+  \href{https://github.com/AnurZ}{github.com/AnurZ} \,|\,
+  \href{https://www.linkedin.com/in/anur-zjaki%C4%87-0169a5309}{linkedin.com/in/anur-zjakić-0169a5309}
+\end{center}
+\vspace{-6pt}
+
+%---------- EXPERIENCE ----------
+\section{Experience}
+\liststart
+  \cvheading{Lotus IT}{Jan 2026 -- Apr 2026}{Software Development Intern}{Mostar}
+  \bulletstart
+    \cvitem{Developed features for a headless CMS built as an application framework: widgets (e.g. TipTap rich-text editor, authentication, weather) talk to a Payload CMS service through a Java/Micronaut middleware of controllers, services and Payload adapters.}
+    \cvitem{Took a feature at the morning meeting, built it during the day and demoed it in an afternoon review, then worked through feedback and change requests.}
+    \cvitem{Started with XP pair programming and TDD; later moved to AI-assisted (agentic) development while staying hands-on. Stack: Java, Micronaut, Payload CMS, TypeScript, Vue.js, Nuxt.}
+  \bulletend
+
+  \cvheading{Freelance}{Jul 2023 -- Present}{Full-Stack Developer}{Remote}
+  \bulletstart
+    \cvitem{Built web applications for clients with Angular, ASP.NET Core Web API and ASP.NET MVC.}
+    \cvitem{Turned client designs into responsive landing pages; designed relational databases and integrated online payment APIs.}
+    \cvitem{Deployed and hosted applications on Azure, including networking and access configuration.}
+  \bulletend
+\listend
+
+%---------- PROJECTS ----------
+\section{Projects}
+\liststart
+  \cvproject{\textbf{GymLink}: gym \& personal-training platform (solo)}
+            {\href{https://github.com/AnurZ/GymLink}{github.com/AnurZ/GymLink} \,|\, 2026}
+            {.NET 10, ASP.NET Core, EF Core, SQL Server, RabbitMQ, SignalR, Stripe, Flutter, Docker, xUnit}
+  \bulletstart
+    \cvitem{Built a clean-architecture ASP.NET Core API, a Flutter Android app for members and trainers, and a Flutter Windows app for gym and platform admins.}
+    \cvitem{Implemented a RabbitMQ transactional outbox and a background worker for notifications and password-reset email, with retries, idempotent processing and dead-letter queues.}
+    \cvitem{Integrated Stripe Checkout (webhook + server-side session verification), real-time chat with SignalR, PDF reports, and an explainable hybrid recommendation engine.}
+    \cvitem{Wrote $\sim$120 xUnit tests (domain, application, API integration, architecture rules); the full stack starts with one \texttt{docker compose up}.}
+  \bulletend
+
+  \cvproject{\textbf{Biteflow}: multi-tenant restaurant management (team of 2)}
+            {\href{https://github.com/AnurZ/Biteflow}{github.com/AnurZ/Biteflow} \,|\, 2025 -- 2026}
+            {Angular 20, ASP.NET Core 8, EF Core, SQL Server, Duende IdentityServer, MediatR, SignalR, xUnit}
+  \bulletstart
+    \cvitem{Worked from an issue tracker with feature branches and pull requests on Azure DevOps; wrote about 70\% of the non-merge commits.}
+    \cvitem{Built authentication end-to-end, moving from plain JWT to ASP.NET Core Identity + Duende IdentityServer with Google sign-in and hCaptcha.}
+    \cvitem{Implemented restaurant onboarding (activation requests, superadmin approval, Angular setup wizard) and tenant data isolation with EF Core global query filters.}
+    \cvitem{Closed authorization and ownership gaps in a security review, centralized the password policy, and added regression tests.}
+  \bulletend
+
+  \cvproject{\textbf{GameShelf}: digital game store (solo)}
+            {\href{https://github.com/AnurZ/GameShelf}{github.com/AnurZ/GameShelf} \,|\, 2025}
+            {Angular 20, ASP.NET Core 9, EF Core, SQLite, JWT}
+  \bulletstart
+    \cvitem{Built a game store with JWT authentication, a coin wallet, discounts, reviews, purchase history, admin game management, and search, filtering, sorting and pagination.}
+  \bulletend
+\listend
+
+%---------- EDUCATION ----------
+\section{Education}
+\liststart
+  \cvheading{Džemal Bijedić University of Mostar, Faculty of Information Technologies}{2023 -- 2027 (expected)}
+            {BSc in Software Engineering \,|\, GPA 8.0/10}{Mostar, Bosnia and Herzegovina}
+\listend
+
+%---------- SKILLS ----------
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{Languages}{: C\#, TypeScript, JavaScript, Dart, Java, SQL} \\
+    \textbf{Backend}{: ASP.NET Core Web API, Entity Framework Core, ASP.NET Identity, JWT, Duende IdentityServer, MediatR, FluentValidation, SignalR, RabbitMQ} \\
+    \textbf{Frontend \& mobile}{: Angular, RxJS, Angular Material, Flutter, Vue.js, Nuxt, HTML/CSS} \\
+    \textbf{Databases}{: SQL Server, PostgreSQL, MySQL, SQLite} \\
+    \textbf{DevOps \& tools}{: Docker, Azure, Azure DevOps Pipelines, GitHub Actions, Git, Swagger, Postman} \\
+    \textbf{Practices}{: TDD, xUnit, integration testing, clean architecture, SOLID, REST API design, Agile/XP} \\
+    \textbf{Also}{: Payload CMS (headless CMS), AI-assisted development} \\
+    \textbf{Spoken languages}{: Bosnian, English} \quad
+    \textbf{Interests}{: weightlifting, building computers, long-distance running}
+  }}
+\end{itemize}
+
+\end{document}
